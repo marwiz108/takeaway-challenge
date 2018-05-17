@@ -7,7 +7,7 @@ class Takeaway
   end
 
   def show_menu
-    @menu.show
+    @menu.items
   end
 
 end
