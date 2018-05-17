@@ -7,7 +7,10 @@ class Takeaway
   end
 
   def show_menu
-    puts (@menu.items).map{ |dish, price| "#{dish}: £#{'%.2f' % price}" }.join("\n")
+    @menu.items
   end
 
 end
+
+
+# .map{ |dish, price| "#{dish}: £#{'%.2f' % price}" }.join("\n") - for show_menu
