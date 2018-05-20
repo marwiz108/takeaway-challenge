@@ -11,4 +11,8 @@ class Menu
   def show
     @dishes.map{ |dish, price| "#{dish}: £#{'%.2f' % price}" }.join("\n")
   end
+
+  def include?(dish)
+    !@dishes[dish].nil?
+  end
 end

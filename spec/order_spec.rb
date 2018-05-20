@@ -9,4 +9,8 @@ describe Order do
     order.add("Lasagne", 1)
     expect(order.items).to eq(items)
   end
+
+  it "does not allow adding items that are not on the menu" do
+    expect{ order.add("Chicken", 1) }.to raise_error "Chicken is not on the menu"
+  end
 end

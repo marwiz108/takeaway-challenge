@@ -25,4 +25,12 @@ describe Menu do
     expect(menu.show).to eq(printed_menu)
   end
 
+  it "can tell if a dish is on the menu" do
+    expect(menu.include?("Pizza")).to be true
+  end
+
+  it "can tell if a dish is not on the menu" do
+    expect(menu.include?("Chicken")).to be false
+  end
+
 end

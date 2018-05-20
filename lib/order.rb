@@ -7,6 +7,7 @@ class Order
   end
 
   def add(dish, amount)
+    fail "#{dish} is not on the menu" unless @menu.include?(dish)
     @items[dish] = amount
   end
 
